@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Source for assets/img/og-image.png (1200x630). Render it at exactly 1200x630 from a local
+     web server (fonts load over HTTP, not file://), e.g. `python3 -m http.server` in the repo root,
+     then screenshot http://127.0.0.1:<port>/tools/og.html at a 1200x630 viewport. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>M&amp;G Group social image</title>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("../assets/fonts/cormorant-garamond-latin-var.woff2") format("woff2"); font-weight: 300 700; font-style: normal; }
+    @font-face { font-family: "Cormorant Garamond"; src: url("../assets/fonts/cormorant-garamond-italic-latin.woff2") format("woff2"); font-weight: 500; font-style: italic; }
+    @font-face { font-family: "Hanken Grotesk"; src: url("../assets/fonts/hanken-grotesk-latin-var.woff2") format("woff2"); font-weight: 100 900; font-style: normal; }
+    html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+    body {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      align-items: center;
+      gap: 56px;
+      box-sizing: border-box;
+      padding: 0 96px;
+      background: #0a1a30;
+      color: #f3eee3;
+      font-family: "Hanken Grotesk", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 28px;
+      border: 1px solid rgb(217 184 114 / 0.28);
+    }
+    .eyebrow { display: flex; align-items: center; gap: 14px; margin: 0 0 26px; font-size: 18px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #d9b872; }
+    .eyebrow::before { content: ""; width: 40px; height: 1px; background: currentColor; }
+    h1 { margin: 0; font: 600 68px/1.04 "Cormorant Garamond", serif; letter-spacing: -0.005em; text-wrap: balance; }
+    .url { margin: 34px 0 0; font-size: 22px; font-weight: 500; color: #b9c2d0; letter-spacing: 0.02em; }
+    .mark { display: grid; justify-items: center; gap: 18px; }
+    .mg { font: 700 176px/1 "Cormorant Garamond", serif; }
+    .amp { font-style: italic; font-weight: 500; color: #d9b872; }
+    .group { font-size: 18px; font-weight: 600; letter-spacing: 0.5em; margin-right: -0.5em; text-transform: uppercase; color: #d9b872; }
+  </style>
+</head>
+<body>
+  <div>
+    <p class="eyebrow">St. Michael, Barbados</p>
+    <h1>A portfolio of businesses, built from Barbados.</h1>
+    <p class="url">mandggroup.com</p>
+  </div>
+  <div class="mark" aria-hidden="true">
+    <span class="mg">M<span class="amp">&amp;</span>G</span>
+    <span class="group">Group</span>
+  </div>
+</body>
+</html>
